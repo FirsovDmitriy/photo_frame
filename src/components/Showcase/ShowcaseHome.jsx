@@ -3,7 +3,7 @@ import { useInfiniteQuery } from '@tanstack/react-query'
 import { GridItem } from '@chakra-ui/react'
 import PhotosService from '@/services/PhotosService'
 import ShowcaseGrid from './ShowcaseGrid'
-import ShowcaseCard from './ShowcaseCard'
+import ShowcaseCard from './Card/ShowcaseCard'
 import Preloader from '@/components/Preloader'
 import useObserver from '@/hooks/useObserver'
 
@@ -19,6 +19,7 @@ const ShowcaseHome = () => {
       },
     }
   )
+  if(isSuccess) console.log('Data'. data)
 
   const nativeElement = useRef(null)
 

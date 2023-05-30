@@ -26,7 +26,7 @@ const ShowcaseModal = ({ item, ...props }) => {
         >
           <Flex alignItems='center' gap='5px'>
             <Icon as={AiFillLike} />
-            <Text as='spnan'>
+            <Text as='span'>
               { item.likes }
             </Text>
           </Flex>

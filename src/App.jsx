@@ -7,7 +7,6 @@ import ShowcaseHome from '@/components/Showcase/ShowcaseHome'
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
-  console.log(typeof(searchQuery))
 
   const search = queryString => setSearchQuery(queryString)
 

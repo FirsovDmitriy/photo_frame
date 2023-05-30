@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext } from 'react'
 import { GridItem, } from '@chakra-ui/react'
-import ShowcaseCard from './ShowcaseCard'
+import ShowcaseCard from './Card/ShowcaseCard'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import PhotosService from '@/services/PhotosService'
 import Preloader from '../Preloader'
@@ -23,6 +23,7 @@ const Showcase = () => {
         },
       }
     )
+    if(isSuccess) console.log(data)
 
   const nativeElement = useRef(null)
 

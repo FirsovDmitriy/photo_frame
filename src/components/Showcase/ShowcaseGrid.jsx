@@ -5,7 +5,13 @@ import AppContainer from '@/components/AppContainer'
 const ShowcaseGrid = ({ children }) => {
   return (
     <Box py={'100px'}>
-      <AppContainer height="100%">
+      <AppContainer
+        height="100%"
+        px={{
+          base: 0,
+          md: '16px'
+        }}
+      >
         <Grid
           position="relative"
           templateColumns={{
@@ -13,7 +19,10 @@ const ShowcaseGrid = ({ children }) => {
             md: '1fr 1fr',
             lg: '1fr 1fr 1fr'
           }}
-          gridAutoRows="300px"
+          gridAutoRows={{
+            base: '600px',
+            md: '320px'
+          }}
           gap={5}
           h="100%"
         >
