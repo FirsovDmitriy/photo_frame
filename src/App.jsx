@@ -8,11 +8,11 @@ import ShowcaseHome from '@/components/Showcase/ShowcaseHome'
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('')
 
-  const search = queryString => setSearchQuery(queryString)
+  const handleSearchQuery = queryString => setSearchQuery(queryString)
 
   const contextValue = {
     searchQuery,
-    search
+    handleSearchQuery
   }
 
   return (

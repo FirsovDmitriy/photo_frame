@@ -19,7 +19,6 @@ const ShowcaseHome = () => {
       },
     }
   )
-  if(isSuccess) console.log('Data'. data)
 
   const nativeElement = useRef(null)
 

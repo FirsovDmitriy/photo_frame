@@ -23,7 +23,6 @@ const Showcase = () => {
         },
       }
     )
-    if(isSuccess) console.log(data)
 
   const nativeElement = useRef(null)
 
