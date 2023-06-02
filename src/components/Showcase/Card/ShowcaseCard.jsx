@@ -24,10 +24,17 @@ const ShowcaseCard = ({ item }) => {
   return (
     <React.Fragment>
       <Card
-        onClick={onOpen}
+        onClick={ onOpen }
         role="group"
-        position={'relative'}
-        h={'100%'}
+        position='relative'
+        w='auto'
+        h={{
+          base: 'auto',
+          md: '420px'
+        }}
+        aspectRatio={
+          item.width / item.height
+        }
         cursor="zoom-in"
       >
         {isTouch ? (
@@ -37,8 +44,6 @@ const ShowcaseCard = ({ item }) => {
         ) : null}
         <CardBody p={0} overflow="hidden">
           <Image
-            h="100%"
-            w="100%"
             objectFit="cover"
             src={item.urls.regular}
             alt={item.alt_description}
