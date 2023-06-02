@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Box } from '@chakra-ui/react'
+import { Grid, Box, Flex } from '@chakra-ui/react'
 import AppContainer from '@/components/AppContainer'
 
 const ShowcaseGrid = ({ children }) => {
@@ -12,24 +12,17 @@ const ShowcaseGrid = ({ children }) => {
           md: '16px'
         }}
       >
-        <Grid
-          position="relative"
-          templateColumns={{
-            base: '1fr',
-            md: '1fr 1fr',
-            lg: '1fr 1fr 1fr'
+        <Flex
+          flexDirection={{
+            base: 'column',
+            md: 'row' 
           }}
-          gridAutoRows={{
-            base: '600px',
-            md: '320px'
-          }}
+          flexWrap='wrap'
+          justifyContent='space-evenly'
           gap={5}
-          h="100%"
         >
-         
          { children }
-
-        </Grid>
+        </Flex>
       </AppContainer>
     </Box>
   )

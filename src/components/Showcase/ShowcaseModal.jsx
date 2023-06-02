@@ -36,7 +36,7 @@ const ShowcaseModal = ({ item, ...props }) => {
           <Image
             h='580px'
             w='100%'
-            objectFit='cover'
+            objectFit='contain'
             src={ item.urls.regular }
             alt={ item.ali_description }
           />

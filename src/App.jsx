@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '@/components/Layout/Layout'
 import { IconContext } from 'react-icons'
 import Showcase from './components/Showcase/Showcase'
@@ -6,6 +6,7 @@ import Context from '@/Context'
 import ShowcaseHome from '@/components/Showcase/ShowcaseHome'
 
 const App = () => {
+
   const [searchQuery, setSearchQuery] = useState('')
 
   const handleSearchQuery = queryString => setSearchQuery(queryString)

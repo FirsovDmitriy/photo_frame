@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useInfiniteQuery } from '@tanstack/react-query'
-import { GridItem } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import PhotosService from '@/services/PhotosService'
 import ShowcaseGrid from './ShowcaseGrid'
 import ShowcaseCard from './Card/ShowcaseCard'
@@ -19,6 +19,7 @@ const ShowcaseHome = () => {
       },
     }
   )
+  if(isSuccess) console.log('Data', data)
 
   const nativeElement = useRef(null)
 
@@ -35,17 +36,15 @@ const ShowcaseHome = () => {
           <React.Fragment key={index}>
 
             {page.map(photo => (
-              <GridItem
-                key={photo.id}
-                className='ShowcaseItem'
-              >
-                <ShowcaseCard item={ photo } />
-              </GridItem>
+              <ShowcaseCard
+                item={ photo }
+                key={ photo.id }
+              />
             ))}
           </React.Fragment>
         ))
       )}
-      <GridItem
+      <Box
         w='100%'
         h='10'
         ref={ nativeElement }

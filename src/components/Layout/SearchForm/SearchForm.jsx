@@ -77,6 +77,7 @@ const SearchForm = () => {
               autoComplete="off"
             />
             <IconButton
+              type='submit'
               variant="ghost"
               position="absolute"
               left={0}

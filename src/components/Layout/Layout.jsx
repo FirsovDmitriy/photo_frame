@@ -7,7 +7,14 @@ const Layout = ({ children }) => {
   return (
     <Box display='flex' flexDirection='column' minH='100vh'>
       <Header />
-      <Box as='main' flex='auto' display='grid' justifyItems='stretch'>
+      <Box
+        as='main'
+        flex='auto'
+        display='grid'
+        justifyItems='stretch'
+        w='100%'
+        h='100%'
+      >
         { children }
       </Box>
     </Box>
